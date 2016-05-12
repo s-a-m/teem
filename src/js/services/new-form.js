@@ -31,11 +31,7 @@ angular.module('Teem')
               }
               // if it is an existing user
               else {
-                if (objectName === 'project') {
-                  scope.project.addContributor(i);
-                } else if (objectName === 'community'){
-                  scope.community.addParticipant(i);
-                }
+                scope[objectName].addParticipant(i);
               }
 
             });
