@@ -42,6 +42,8 @@
     "xdescribe": false,
     "xit": false,
     "__session": false,
-    "PushNotification": false
+    "PushNotification": false,
+    "isDesktop": false,
+    "communityUrl": false
   }
 }

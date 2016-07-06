@@ -1,18 +1,15 @@
 'use strict';
 
-var sessionPage = require(__dirname + '/pages/session'),
+var sessionPage = require('./pages/session'),
     registerPage = new sessionPage.Register(),
     loginPage = new sessionPage.Login();
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
 
 describe('Teem', function() {
-  beforeAll(function() {
-    browser.get('/');
-    browser.driver.executeScript('window.localStorage.clear();');
-  });
 
   describe('1% core user', function() {
+
     beforeAll(function() {
       browser.get('/communities');
     });
@@ -30,6 +27,7 @@ describe('Teem', function() {
             pad: 'Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam.'
           };
 
+/*
       var newCommunityButton = element(by.css('.plus'));
 
       browser.wait(function() {
@@ -98,6 +96,7 @@ describe('Teem', function() {
 
       expect(element(by.css('#pad ul:first-child')).getText()).toBe(project.pad);
 
+      */
       // Needs
       if(!isDesktop) {
         element(by.css('a.nav-needs')).click();
